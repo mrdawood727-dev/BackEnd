@@ -3,9 +3,7 @@ import { DB_NAME } from "../constants.js";
 
 const connectDB = async () => {
   try {
-    const connectInstance = await mongoose.connect(
-      process.env.MONGO_URL
-    );
+    const connectInstance = await mongoose.connect(process.env.MONGO_URL);
     console.log("\n MongoDB connected:", connectInstance.connection.host);
   } catch (error) {
     console.log("MongoDB connection FAILED:", error);
@@ -13,4 +11,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB;   
+export default connectDB;
